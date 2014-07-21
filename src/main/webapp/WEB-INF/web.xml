@@ -6,4 +6,21 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
+
+  <filter>
+    <filter-name>GWTCacheControlFilter</filter-name>
+    <filter-class>org.realityforge.gwt.cache_filter.GWTCacheControlFilter</filter-class>
+  </filter>
+  <filter>
+    <filter-name>GWTGzipFilter</filter-name>
+    <filter-class>org.realityforge.gwt.cache_filter.GWTGzipFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>GWTCacheControlFilter</filter-name>
+    <url-pattern>/example/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>GWTGzipFilter</filter-name>
+    <url-pattern>/example/*</url-pattern>
+  </filter-mapping>
 </web-app>
