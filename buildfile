@@ -8,14 +8,14 @@ desc 'A simple application demonstrating the use of the gwt-cache-filter library
 define 'gwt-cache-filter-example' do
   project.group = 'org.realityforge.gwt.cache-filter.example'
 
-  compile.options.source = '1.7'
-  compile.options.target = '1.7'
+  compile.options.source = '1.8'
+  compile.options.target = '1.8'
   compile.options.lint = 'all'
 
   compile.with PROVIDED_DEPS, COMPILE_DEPS
 
   gwt_dir = gwt(['org.realityforge.gwt.cache_filter.example.Example'],
-                :java_args => ['-Xms512M', '-Xmx1024M', '-XX:PermSize=128M', '-XX:MaxPermSize=256M'],
+                :java_args => %w(-Xms512M -Xmx1024M),
                 :draft_compile => (ENV['FAST_GWT'] == 'true'),
                 :dependencies => [:javax_validation, :javax_validation_sources] + project.compile.dependencies)
 
