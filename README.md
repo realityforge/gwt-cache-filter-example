@@ -1,3 +1,7 @@
+# Deprecated: Example moved to project
+
+---
+
 gwt-cache-filter-example
 ========================
 
