@@ -1,4 +1,4 @@
-# Deprecated: Example moved to project
+> Deprecated: Example moved to `gwt-cache-filter` project
 
 ---
 
